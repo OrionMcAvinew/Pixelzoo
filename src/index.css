@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --sky: #6ec6ff;
+  --grass: #6abf4b;
+  --grass-dark: #4f9b37;
+  --panel: #f4e3c1;
+  --panel-dark: #d9b878;
+  --panel-border: #5a3a22;
+  --ink: #2b1d10;
+  --accent: #ff8c42;
+  --accent-dark: #d8651b;
+  --good: #5fcf6b;
+  --warn: #e8c44d;
+  --bad: #e0524d;
+
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sky);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 3px solid var(--panel-border);
+  background: var(--accent);
+  color: var(--ink);
+  padding: 6px 10px;
+  font-size: 11px;
+  box-shadow: 2px 2px 0 var(--panel-border);
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.active {
+  background: var(--good);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: inherit;
+}
+
+p {
+  margin: 0;
+}
